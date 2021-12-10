@@ -1,0 +1,8 @@
+ar.js
+https://ar-js-org.github.io/AR.js-Docs/image-tracking/
+https://carnaux.github.io/NFT-Marker-Creator/#/
+https://hacknote.jp/archives/23250/
+https://kkblab.com/make/javascript/ar.html
+
+netlify
+https://qiita.com/sugo/items/2ee64887d682b0dae635
