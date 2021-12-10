@@ -25,8 +25,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>読み込み中...</div></br>
-    <div>しばらくお待ちください。</div>
+    <div>読み込み中...</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -35,6 +34,9 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
     <!-- we use cors proxy to avoid cross-origin problems -->
+    <a-assets>
+      <img id="img"src="https://susngy.netlify.app/sample01/index2marker/marker_infoARGlass.png" />
+    </a-assets>
 <!--
     <a-nft
       type="nft"
@@ -53,12 +55,17 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
+<!--
       <a-entity
         gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
         scale="5 5 5"
         position="0 0 0"
       >
-      </a-entity>
+-->
+      <a-plane
+        rotation="-90 0 0"
+        src="#img"
+      ></a-plane>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
