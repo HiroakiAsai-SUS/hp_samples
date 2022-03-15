@@ -1,0 +1,51 @@
+#!/usr/bin/expect
+
+set ans1 81
+set ans2 tokyo
+set ans3 none
+set ans4 "Local"
+set ans5 "hogehoge123@gmail.com"
+set ans6 password
+set ans7 none
+
+spawn openssl req -new -key server.key -out server.csr
+
+expect {
+        -regexp ".*Country Name.*" {
+                send "${ans1}\n"
+                exp_continue
+        }
+        -regexp ".*State or Province Name.*" {
+                send "${ans2}\n"
+                exp_continue
+        }
+         -regexp ".*Locality Name.*" {
+                send "${ans2}\n"
+                exp_continue
+        }
+         -regexp ".*Organization Name.*" {
+                send "${ans3}\n"
+                exp_continue
+        }
+        -regexp ".*Organizational Unit Name.*" {
+                send "${ans3}\n"
+                exp_continue
+        }
+        -regexp ".*Common Name.*" {
+                send "${ans4}\n"
+                exp_continue
+        }
+        -regexp ".*Email Address.*" {
+                send "${ans5}\n"
+                exp_continue
+        }
+        -regexp ".*A challenge password.*" {
+                send "${ans6}\n"
+                exp_continue
+        }
+        -regexp ".*An optional company name.*" {
+                send "${ans7}\n"
+                exp_continue
+        }
+}
+exit 0

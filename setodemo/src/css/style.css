@@ -1,0 +1,82 @@
+body {
+    background-color: #f1ced2;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000000000000;
+    background-color: black;
+    color: #FFF;
+    background-image: url("../img/nowloading.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#loader.hidden {
+    display: none;
+}
+
+#loader>p {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+/*ポップアップ*/
+
+.a-info-message{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    color: rgb(51, 51, 51);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: auto;
+    font-size: 11pt;
+    line-height: 20pt;
+    z-index: 9999;
+    border: 8px solid #f1ced2;
+}
+.a-info-message a{
+    border-bottom: 1px solid rgba(53,196,232,.15);
+    color: #1497B8;
+    position: relative;
+    text-decoration: none;
+    transition: .05s ease;
+}
+@media only screen and (min-width: 1200px) {
+    .a-info-message {font-size: 12pt}
+}
+@media only screen and (max-width: 800px) {
+    .a-info-message {width: 92%; height: 90%;}
+}
+@media only screen and (max-width: 600px) {
+    .a-info-message {width: 92%; height: 90%;}
+}
+@media only screen and (max-height: 600px) {
+    .a-info-message {width: 92%; height: 90%}
+}
+.a-close-button-info{width: 25px; height: 25px; padding: 0;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    border: none;
+    background-color: #E4007f;
+    font-weight: medium;
+    text-align: center;
+}
+.a-close-button-info:hover {background-color: #B32146; color: white}
+.a-info-message-container {position: absolute; left: 100px; bottom: 20px;}
