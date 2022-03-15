@@ -60837,17 +60837,20 @@
       schema: {
         enabled: {default: true},
         deviceMotionMessage: {
-          default: 'This immersive website requires access to your device motion sensors.'
+          // efault: 'This immersive website requires access to your device motion sensors.'
+          default: 'この没入型Webサイトでは、デバイスのモーションセンサーにアクセスする必要があります。'
         },
         mobileDesktopMessage: {
-          default: 'Set your browser to request the mobile version of the site and reload the page to enjoy immersive mode.'
+          // default: 'Set your browser to request the mobile version of the site and reload the page to enjoy immersive mode.'
+          default: 'サイトのモバイル版をリクエストするようにブラウザを設定し、ページをリロードして没入型モードをお楽しみください。'
         },
         httpsMessage: {
-          default: 'Access this site over HTTPS to enter VR mode and grant access to the device sensors.'
+          // default: 'Access this site over HTTPS to enter VR mode and grant access to the device sensors.'
+          default: 'HTTPS経由でこのサイトにアクセスしてVRモードに入り、デバイスセンサーへのアクセスを許可します。'
         },
-        denyButtonText: {default: 'Deny'},
-        allowButtonText: {default: 'Allow'},
-        cancelButtonText: {default: 'Cancel'}
+        denyButtonText: {default: '拒否'},
+        allowButtonText: {default: '許可'},
+        cancelButtonText: {default: 'キャンセル'}
       },
     
       init: function () {
