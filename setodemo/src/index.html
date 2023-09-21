@@ -1,6 +1,8 @@
 <html>
     <head>
         <!-- <script src="https://aframe.io/releases/1.2.0/aframe.js"></script> -->
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
         <meta charset="utf-8" />
         <meta name="author" content="エスユーエス名古屋">
         <meta name="description" content="エスユーエス名古屋WebAR">
@@ -39,8 +41,10 @@
                 <!-- <a-asset-item id="setochan" src="./seto/seto2.glb"></a-asset-item> -->
                 <audio id="sample" muted playinline src="./sound/dragon.mp3"></audio>
                 <audio id="sample2" muted playinline src="./sound/dragon.mp3"></audio>
-                <img id="yakimonokoujou" src="./img/YakimonoKoujou2.png">
-                <img id="setoden" src="./img/Setoden.png">
+                <!-- 
+                    <img id="yakimonokoujou" src="./img/YakimonoKoujou2.png">
+                    <img id="setoden" src="./img/Setoden.png">
+                -->
             </a-assets>
 
             <!-- ライト -->
@@ -50,7 +54,9 @@
 
             <!-- マーカーと表示したいオブジェクト -->
             <a-marker preset="custom" type="pattern" url='./pattern-ar-test.patt' markerevent1></a-marker>
+            <!-- 
             <a-marker preset="custom" type="pattern" url='./pattern-seto.patt' markerevent2></a-marker>
+            -->
 
             <a-entity id="setochan-model" visible="false">
                 <a-entity id="setochan-outer">
@@ -126,7 +132,7 @@
                     });
                 }
             });
-
+            /*
             AFRAME.registerComponent('markerevent2', {
                 init: function () 
                 {
@@ -185,7 +191,7 @@
                     });
                 }
             });
-            
+            */
 
             /*
             AFRAME.registerComponent('box', {
