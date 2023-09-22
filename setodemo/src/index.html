@@ -37,7 +37,7 @@
                 <audio id="se_b" muted playinline src="./sound/dragon.mp3?2"></audio>
 
                 <!-- 表示するもの -->
-                <a-asset-item id="setochan" src="./obj/fukui/dragon.glb"></a-asset-item>
+                <a-asset-item id="setochan" src="./obj/fukui/WalkingBrakio.glb"></a-asset-item>
                 <!-- <a-asset-item id="setochan" src="./seto/seto2.glb"></a-asset-item> -->
                 <audio id="sample" muted playinline src="./sound/dragon.mp3"></audio>
                 <audio id="sample2" muted playinline src="./sound/dragon.mp3"></audio>
@@ -48,7 +48,7 @@
             </a-assets>
 
             <!-- ライト -->
-            <a-entity light="type:directional;castShadow:true;color:white;intensity:7;" position="-1 1 2"></a-entity>
+            <a-entity light="type:directional;castShadow:true;color:white;intensity:3.5;" position="-1 1 2"></a-entity>
             <!--反射光-->
             <a-entity light="type:ambient;color:gray;"></a-entity>
 
@@ -60,7 +60,7 @@
 
             <a-entity id="setochan-model" visible="false">
                 <a-entity id="setochan-outer">
-                    <a-gltf-model id="setochan-inner" src="#setochan" scale="0.03 0.03 0.03" animation-mixer>
+                    <a-gltf-model id="setochan-inner" src="#setochan" scale="4.00 4.00 4.00" animation-mixer>
                     </a-gltf-model>
                 </a-entity>
             </a-entity>
@@ -108,8 +108,8 @@
                         var setochan_outer = document.getElementById('setochan-outer');
                         var setochan_inner = document.getElementById('setochan-inner');
                         setochan.setAttribute('visible', false);
-                        setochan_outer.setAttribute('position', '0 -0.13 -1');
-                        setochan_outer.setAttribute('rotation', '0 0 0');
+                        setochan_outer.setAttribute('position', '0 -0.2 -1');
+                        setochan_outer.setAttribute('rotation', '0 45 0');
                         setochan_inner.setAttribute('position', '0 0 0');
                         setochan_inner.setAttribute('rotation', '0 0 0');
                         setochan.setAttribute('visible', true);
