@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>QuickLook-Test</title>
-
-    </head>
-    <div>
-        <a id="ar-model"
-            rel="ar" 
-            href="./obj/fukui/WalkingBrakio.usdz#
-            callToAction=購入ページへ&
-            checkoutTitle=The Apple&
-            checkoutSubtitle=Red Color&
-            price=1,100円">
-                <img src="./img/wan.png">
-        </a>
-
-    </div>
-    <script>
-        document.querySelector('a').addEventListener("message", function (event) {   
-            if (event.data == "_apple_ar_quicklook_button_tapped") {
-                window.open('https://www.amazon.co.jp/', '_blank');
-            }
-        }, false);
-
-    </script>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta charset="utf-8" />
+        <meta name="author" content="エスユーエス名古屋">
+        <meta name="description" content="エスユーエス名古屋WebAR">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="エスユーエス名古屋WebAR">
+        <meta property="og:title" content="エスユーエス名古屋WebAR">
+        <meta property="og:site_name" content="エスユーエス名古屋WebAR" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="Pragma" content="no-store">
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="Expires" content="0">
+		<title>QuickLook-Test</title>
+		
+	</head>
+    <audio id="se_a" muted playinline src="./sound/dragon.mp3?1"></audio>
+	<div>
+		<a id="ar-model"
+			rel="ar" 
+			href="./obj/fukui/WalkingBrakio.usdz#
+			callToAction=鳴き声&
+			checkoutTitle=ブラキオ&
+			checkoutSubtitle=恐竜"
+            >
+				<img rel="ar" src="./img/brachio.png" onclick="OnLinkClick();">
+		</a>
+		
+	</div>
+	<script>
+		document.querySelector('a').addEventListener("message", function (event) {   
+			if (event.data == "_apple_ar_quicklook_button_tapped") {
+				// window.open('https://www.amazon.co.jp/', '_blank');
+                const audio = document.getElementById('se_a');
+                audio.muted = false;
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play();
+                
+			}
+		}, false);		
+	</script>
 </html>
