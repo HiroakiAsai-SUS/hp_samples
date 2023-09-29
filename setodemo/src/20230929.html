@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>QuickLook-Test</title>
+
+    </head>
+    <div>
+        <a id="ar-model"
+            rel="ar" 
+            href="./obj/fukui/WalkingBrakio.usdz#
+            callToAction=購入ページへ&
+            checkoutTitle=The Apple&
+            checkoutSubtitle=Red Color&
+            price=1,100円">
+                <img src="./img/wan.png">
+        </a>
+
+    </div>
+    <script>
+        document.querySelector('a').addEventListener("message", function (event) {   
+            if (event.data == "_apple_ar_quicklook_button_tapped") {
+                window.open('https://www.amazon.co.jp/', '_blank');
+            }
+        }, false);
+
+    </script>
+</html>
